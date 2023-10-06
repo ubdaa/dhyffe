@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Profil : @astefion - Dhyffe</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+    </head>
+    <body>
+        <div class="header">
+            <img src="images/dhyffe-logo.png" alt="">
+            <h1>Dhyffe</h1>
+        </div>
+        <div class="dashboard">
+            <div class="profil">
+                <img src="images/default-avatar.jpg" alt="">
+                <p>Pseudo</p>
+                <p class="pseudoAt">@pseudo</p>
+            </div>
+            <div class="actions">
+                <a href="accueil.php"><button><span class="material-symbols-rounded">home</span>Accueil</button></a><br>
+                <a href="profil.php"><button><span class="material-symbols-rounded">account_circle</span>Profil</button></a><br>
+                <a href="createPost.php"><button><span class="material-symbols-rounded">post_add</span>Créer un post</button></a><br>
+                <a href="logOut.php"><button class="logout"><span class="material-symbols-rounded">logout</span>Déconnexion</button></a>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="postLine">
+                <div class="post">
+                    <p class="modifyTitle">Création de post !</p>
+                </div>
+                <div class="post">
+                    <div class="compte">
+                        <form action="index.html" method="post">
+                            <div class="profil">
+                                <img src="images/asterion.jpg" alt="">
+                                <p>Astérion</p>
+                                <p class="pseudoAt">@astefion</p>
+                            </div>
+                            
+                            <hr>
+
+                            <div class="postCreation">
+                                <input type="text" name="title" placeholder="Votre titre">
+                                <textarea name="content" id="" placeholder="Le contenu de votre post"></textarea>
+                                <button><span class="material-symbols-rounded">send</span>Poster</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="modify.js"></script>
+    </body>
+</html>

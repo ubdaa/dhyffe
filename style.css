@@ -1,0 +1,532 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background: #fff;
+}
+
+.header {
+    position: fixed;
+    background: linear-gradient(135deg, #F37748, #6CA6C1);
+    display: flex;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 200px 10px;
+    width: 100%;
+}
+
+.header  img{
+    display:flex;
+    width: 100px;
+}
+
+.header h1 {
+    color: #F7FFF7;
+    padding-left: 40px;
+}
+
+@media all and (max-width: 1200px) {
+    .dashboard button {
+        font-size: 0px;
+    }
+}
+
+.dashboard {
+    position:fixed;
+    display: inline-table;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    padding: 20px 30px;
+    height: 82%;
+    margin-left: 10%;
+    margin-top: 30px;
+    top: 120px;
+    width: 20%;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard .actions {
+    position: relative;
+}
+
+.dashboard span {
+    padding-right: 5px;
+}
+
+.dashboard button {
+    display: flex;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    border-radius: 40px;
+    border-width: 2px;
+    background: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    border-color: rgba(1, 1, 1, 0.1);
+}
+
+.dashboard button:hover {
+    background:  rgba(1, 1, 1, 0.1);
+    transition: 0.4s;
+    cursor:pointer;
+}
+
+.dashboard button:active {
+    background: #F37748;
+    color: #F7FFF7;
+    transition: 0.1s;
+}
+
+.dashboard .logout {
+    /*dddd*/
+    margin-top: 20vh;
+
+}
+
+.profil {
+    display: flex;
+    padding-bottom: 20px;
+}
+
+.profil p {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-left: 15px;
+}
+
+.profil img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.pseudoAt {
+    font-weight: 300;
+    color:rgba(0, 0, 0, 0.6);
+    margin-left: 0%;
+}
+
+.profil img {
+    display: flex;
+    border-radius: 50%;
+}
+
+.main {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.postLine {
+    padding-top:150px;
+}
+
+.post {
+    border-radius: 30px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    padding: 20px 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background: #fff;
+    width: 100%;
+}
+
+.post {
+    line-height: 1.5rem;
+}
+
+.post .profil p {
+    font-weight: 600;
+}
+
+.post .profil .pseudoAt{
+    font-weight: 300;
+    color:rgba(0, 0, 0, 0.6);
+}
+
+.commentaire {
+    padding-top: 10px;
+    display:flex;
+    border-width: 1px;
+    border-color: rgba(1, 1, 1, 0.1);
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.post h3{
+    width:100%;
+    padding-bottom: 10px;
+    text-decoration: underline;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor:pointer;
+}
+
+a:active {
+    text-decoration: none;
+    color: black;
+    cursor:pointer;
+}
+
+.commentaire input {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 5px;
+    border-width: 1px;
+    font-size: 0.9rem;
+    border-color: rgba(1, 1, 1, 0.1);
+}
+
+.commentaire input:focus-visible {
+    outline-style: none;
+    background-color: rgba(1, 1, 1, 0.05);
+}
+
+.commentaire button {
+    justify-content: center;
+    align-items: center;
+    width:50px;
+    padding: 5px;
+    border-radius: 50px;
+    border-width: 1px;
+    background-color: #fff;
+    border-color: rgba(1, 1, 1, 0.1);
+}
+
+.commentaire img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20px; 
+}
+
+.commentaire button:hover {
+    background:  rgba(1, 1, 1, 0.1);
+    transition: 0.4s;
+    cursor:pointer;
+}
+
+.commentaire button:active {
+    background: #F37748;
+    color: #F7FFF7;
+    transition: 0.1s;
+}
+
+.commentSpace .profil {
+    padding-top: 20px;
+    padding-bottom: 0px;
+}
+
+.commentSpace img {
+    width: 50px;
+}
+
+.topComment p {
+    margin-top: 10px;
+}
+
+.compte h4 {
+    margin-bottom: 5px;
+}
+
+hr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-top: 2px solid rgba(1, 1, 1, 0.1);
+    border-color: rgba(1, 1, 1, 0.1);
+    border-radius: 5px;
+}
+
+.compte .profil form {
+    display: flex;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+}
+
+.compte .profil form button {
+    display: flex;
+    background: #fff;
+    margin-left:80%;
+    padding: 10px;
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-width: 2px;
+    border-style: solid;
+}
+
+.compte .profil form button:hover {
+    background:  rgba(1, 1, 1, 0.1);
+    transition: 0.4s;
+    cursor:pointer;
+}
+
+.compte .profil form button:active {
+    background: #F37748;
+    color: #F7FFF7;
+    transition: 0.1s;
+}
+
+.compte form .profil button {
+    position: relative;
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding:15px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 15px;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-width: 2px;
+    border-style: solid;
+}
+
+.compte form .profil button:hover {
+    background:  rgba(1, 1, 1, 0.1);
+    transition: 0.4s;
+    cursor:pointer;
+}
+
+.compte form .profil button:active {
+    background: #F37748;
+    color: #F7FFF7;
+    transition: 0.1s;
+}
+
+.compte form .pseudoAt {
+    align-items: center;
+    position:relative;
+}
+
+.compte form input {
+    margin-right: 15px;
+    display:flex;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-color: #fff;
+    border-style: solid;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 8px;
+}
+
+.compte form input:hover {
+    background:  rgba(1, 1, 1, 0.1);
+    transition: 0.4s;
+    cursor:pointer;
+}
+
+.compte form input:focus-visible {
+    cursor:text;
+    outline-style: none;
+    background-color: rgba(243, 119, 72, 0.1);
+}
+
+.compte form .biographie input {
+    padding-top: auto;
+    padding-bottom: auto;
+    width:100%;
+    height:20%;
+    font-weight: 200;
+}
+
+.compte form textarea {
+    margin-right: 15px;
+    display:flex;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-color: #fff;
+    border-style: solid;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 8px;
+}
+
+.compte form textarea:hover {
+    background:  rgba(1, 1, 1, 0.1);
+    transition: 0.4s;
+    cursor:pointer;
+}
+
+.compte form textarea:focus-visible {
+    cursor:text;
+    outline-style: none;
+    background-color: rgba(243, 119, 72, 0.1);
+}
+
+.compte form .biographie textarea {
+    padding-top: auto;
+    padding-bottom: auto;
+    width:100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height:10vh;
+    height:20%;
+    font-weight: 200;
+}
+
+.compte form img {
+    margin-right: 15px;
+}
+
+.modifyTitle{
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    display:block; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.modifyTitle {
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.error p {
+    margin-top: 10px;;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #FF4F79;
+}
+
+input[type="file"] {	
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+
+.profil label img:hover {
+    cursor:pointer;
+    color:rgba(1, 1, 1, 0.1);
+    filter:grayscale(100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: 0.4s;
+}
+
+form hr {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-top: 2px solid rgba(1, 1, 1, 0.1);
+    border-color: rgba(1, 1, 1, 0.1);
+    border-radius: 5px;
+}
+
+form .postCreation input {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+    width:100%;
+    height:20%;
+    font-size: 1.2rem;
+    text-decoration:underline;
+}
+
+form .postCreation textarea {
+    font-weight: 200;
+    width:100%;
+    min-width: 100%;
+    max-width: 100%;
+    min-height:10vh;
+    height:20%;
+}
+
+.postCreation button {
+    position: relative;
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    padding:15px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 15px;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-width: 2px;
+    border-style: solid;
+}
+
+.postCreation span {
+    padding-right: 5px;
+}
+
+.postCreation button:hover {
+    background:  rgba(1, 1, 1, 0.1);
+    transition: 0.4s;
+    cursor:pointer;
+}
+
+.postCreation button:active {
+    background: #F37748;
+    color: #F7FFF7;
+    transition: 0.1s;
+}
+
+.datetime {
+    font-weight: 300;
+    color:rgba(0, 0, 0, 0.6);
+    padding-top: 10px;
+}
