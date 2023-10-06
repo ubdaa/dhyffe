@@ -48,8 +48,7 @@ $posts = getPostsFromToday();
             </div>
             <?php
                 if (isset($state) && $state === 1) {
-                    echo '
-                    <a href="accueil.php"><button><span class="material-symbols-rounded">home</span>Accueil</button></a><br>
+                    echo '<a href="accueil.php"><button><span class="material-symbols-rounded">home</span>Accueil</button></a><br>
                     <a href="profil.php?p=' . $infos[0]["username"] . '"><button><span class="material-symbols-rounded">account_circle</span>Profil</button></a><br>
                     <a href="createPost.php"><button><span class="material-symbols-rounded">post_add</span>Créer un post</button></a><br>
                     <a href="logOut.php"><button class="logout"><span class="material-symbols-rounded">logout</span>Déconnexion</button></a>';
