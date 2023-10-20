@@ -128,3 +128,11 @@ body {
     margin-right: 20px;
     width:100px;
 }
+
+@media all and (max-width: 800px) {
+    
+    .panelPrin {
+        width: 80%;
+    }
+
+}
