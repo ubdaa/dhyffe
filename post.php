@@ -80,10 +80,32 @@ $author = getInfoFromAuthor($postInfo[array_key_first($postInfo)]["userId"]);
                     
                     <hr>
 
-                    <?php echo '<form action="commPost.php?p=' . $postInfo[0]["postId"] . '" class="commentaire">'; ?>
-                        <input type="text" placeholder="Mettre un commentaire">
+                    <?php echo '<form action="commPost.php?p=' . $postInfo[0]["postId"] . '" class="commentaire" method="post">'; ?>
+                        <input type="text" name="Content" placeholder="Mettre un commentaire">
                         <button><img src="images/send.png" alt=""></button>
                     </form>
+
+                    <?php
+                        require_once("include/globalFunction.php");
+
+                        $comms = getAllCommsFromPost($postInfo[0]['postId']); 
+
+                        if (!($comms == NULL)) {
+                            
+                            foreach($comms as $comm) {
+                                $commPost = getInfoFromAuthor($comm["creatorId"]);
+
+                                echo '<div class="profil" style="padding-top: 20px;">
+                                    <img src="' . $commPost[0]["pdpPath"] . '" style="width: 60px;" alt="">
+                                    <p>' . $commPost[0]["name"] . '</p>
+                                    <p class="pseudoAt">@' . $commPost[0]["username"] . '</p>
+                                </div>';
+
+                                echo '<p>' . $comm['content'] . '</p>';
+                                echo '<hr>';
+                            }
+                        }
+                    ?>
                 </div>
             </div>
         </div>

@@ -263,3 +263,42 @@ function getPostsFromToday() {
         return $results;
     }
 }
+
+function postComm(int $postId, int $creatorId, string $content) {
+    try {
+        require("include/dbConnec.php");
+
+        $query = "INSERT INTO comms (postId, creatorId, content) VALUES (?, ?, ?);";
+
+        $stmt = $pdo->prepare($query);
+        $stmt->execute([$postId, $creatorId, $content]);
+
+        $pdo = null;
+        $stmt = null;
+        
+        header("Location: ../post.php?p=" . $postId);
+        die();
+
+    } catch (PDOException $e) {
+        echo $e;
+    }
+}
+
+function getAllCommsFromPost(int $postId) {
+
+    require("include/dbConnec.php");
+
+    $query = "SELECT * FROM comms WHERE postId = :postId";
+
+    $stmt2 = $pdo->prepare($query);
+    $stmt2->bindParam(":postId", $postId);
+    $stmt2->execute();
+
+    $results = $stmt2->fetchAll(PDO::FETCH_ASSOC);
+
+    if (empty($results)) {
+        return null;
+    } else {
+        return $results;
+    }
+}

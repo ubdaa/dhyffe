@@ -86,13 +86,36 @@ $posts = getPostsFromToday();
                                     <p class="datetime">' . $post["postedAt"] . '</p>
                                 </a>
     
-                                <hr>
+                                <hr>';
     
-                                <form action="commPost.php?p=' . $post["postId"] . '" class="commentaire">
-                                    <input type="text" placeholder="Mettre un commentaire">
+                            if ($_SESSION['connState'] === 1) {
+                                echo '<form action="commPost.php?p=' . $post["postId"] . '" class="commentaire" method="post">
+                                    <input type="text" name="Content" placeholder="Mettre un commentaire">
                                     <button><img src="images/send.png" alt=""></button>
-                                </form>
-                        </div>';
+                                </form>';
+                            }
+                            
+                            require_once("include/globalFunction.php");
+
+                            $comms = getAllCommsFromPost($post["postId"]); 
+
+                            if (!($comms == NULL)) {
+                                
+                                $nComm = count($comms) - 1;
+                                $rComm = rand(0, $nComm);
+
+                                $commPost = getInfoFromAuthor($comms[$rComm]["creatorId"]);
+
+                                echo '<div class="profil" style="padding-top: 20px;">
+                                    <img src="' . $commPost[0]["pdpPath"] . '" style="width: 60px;" alt="">
+                                    <p>' . $commPost[0]["name"] . '</p>
+                                    <p class="pseudoAt">@' . $commPost[0]["username"] . '</p>
+                                </div>';
+
+                                echo '<p>' . $comms[$rComm]['content'] . '</p>';
+                            }
+
+                        echo '</div>';
     
                         $l_Index++;
     
