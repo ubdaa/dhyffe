@@ -22,7 +22,9 @@ $posts = getPostsFromToday();
         <meta charset="UTF-8">
         <title>Page d'accueil - Dhyffe</title>
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />    
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     </head>
     <body>
         <div class="header">
@@ -88,7 +90,7 @@ $posts = getPostsFromToday();
     
                                 <hr>';
     
-                            if ($_SESSION['connState'] === 1) {
+                            if (isset($_SESSION['connState']) && $_SESSION['connState'] === 1) {
                                 echo '<form action="commPost.php?p=' . $post["postId"] . '" class="commentaire" method="post">
                                     <input type="text" name="Content" placeholder="Mettre un commentaire">
                                     <button><img src="images/send.png" alt=""></button>

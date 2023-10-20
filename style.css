@@ -36,12 +36,6 @@ body {
     padding-left: 40px;
 }
 
-@media all and (max-width: 1200px) {
-    .dashboard button {
-        font-size: 0px;
-    }
-}
-
 .dashboard {
     position:fixed;
     display: inline-table;
@@ -299,7 +293,7 @@ hr {
     transition: 0.1s;
 }
 
-.compte form .profil button {
+.compte form button {
     position: relative;
     display:flex;
     margin-left: auto;
@@ -320,13 +314,13 @@ hr {
     border-style: solid;
 }
 
-.compte form .profil button:hover {
+.compte form button:hover {
     background:  rgba(1, 1, 1, 0.1);
     transition: 0.4s;
     cursor:pointer;
 }
 
-.compte form .profil button:active {
+.compte form button:active {
     background: #F37748;
     color: #F7FFF7;
     transition: 0.1s;
@@ -529,4 +523,201 @@ form .postCreation textarea {
     font-weight: 300;
     color:rgba(0, 0, 0, 0.6);
     padding-top: 10px;
+}
+
+@media all and (max-width: 1300px) {
+
+    .dashboard {
+        padding: 20px 20px;
+        height: 76%;
+        margin-left: 5%;
+        margin-top: 30px;
+        top: 120px;
+        width: 20px;
+        font-weight: 100;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .dashboard span {
+        padding-right: 0px;
+        font-size: 22px;
+    }
+
+    .dashboard .profil p {
+        font-size: 0px;
+        display:none;
+    }
+
+    .dashboard .profil img {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        width:45px;
+    }
+
+    .dashboard button {
+        display: inline-block;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height:50px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 40px;
+        border-width: 2px;
+        font-size: 0px;
+    }
+
+    .main {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .postLine {
+        padding-top:150px;
+    }
+    
+    .post {
+        border-radius: 30px;
+        margin-left: 50px;
+        margin-bottom: 40px;
+        padding: 20px 30px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        background: #fff;
+        width: 100%;
+    }
+    
+    .post {
+        line-height: 1.2rem;
+        font-size: 13px;
+    }
+
+    .post p {
+        font-size: 13px;
+    }
+
+    .post .profil img {
+        width:60px;
+    }
+    
+    .post .profil p {
+        font-weight: 600;
+    }
+    
+    .post .profil .pseudoAt{
+        font-weight: 300;
+        color:rgba(0, 0, 0, 0.6);
+    }
+    
+    .commentaire {
+        padding-top: 10px;
+        display:flex;
+        border-width: 1px;
+        border-color: rgba(1, 1, 1, 0.1);
+        background-color: #fff;
+        border-radius: 20px;
+    }
+    
+    .post h3{
+        width:100%;
+        padding-bottom: 10px;
+        text-decoration: underline;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+        cursor:pointer;
+    }
+    
+    a:active {
+        text-decoration: none;
+        color: black;
+        cursor:pointer;
+    }
+    
+    .commentaire input {
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-right: 5px;
+        border-width: 1px;
+        font-size: 0.8rem;
+        border-color: rgba(1, 1, 1, 0.1);
+    }
+    
+    .commentaire input:focus-visible {
+        outline-style: none;
+        background-color: rgba(1, 1, 1, 0.05);
+    }
+    
+    .commentaire button {
+        justify-content: center;
+        align-items: center;
+        width:40px;
+        padding: 5px;
+        border-radius: 50px;
+        border-width: 1px;
+        background-color: #fff;
+        border-color: rgba(1, 1, 1, 0.1);
+    }
+    
+    .commentaire img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 16px; 
+    }
+    
+    .commentaire button:hover {
+        background:  rgba(1, 1, 1, 0.1);
+        transition: 0.4s;
+        cursor:pointer;
+    }
+    
+    .commentaire button:active {
+        background: #F37748;
+        color: #F7FFF7;
+        transition: 0.1s;
+    }
+    
+    .commentSpace .profil {
+        padding-top: 15px;
+        padding-bottom: 0px;
+    }
+    
+    .commentSpace .profil img{
+        width: 40px;
+    }
+
+    .commentSpace img {
+        width: 30px;
+    }
+    
+    .topComment p {
+        margin-top: 10px;
+    }
+    
+    .compte h4 {
+        margin-bottom: 5px;
+    }
+    
+    hr {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border-top: 2px solid rgba(1, 1, 1, 0.1);
+        border-color: rgba(1, 1, 1, 0.1);
+        border-radius: 5px;
+    }
 }

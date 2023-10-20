@@ -3,5 +3,5 @@ input.addEventListener('input', resizeInput); // bind the "resizeInput" callback
 resizeInput.call(input); // immediately call the function
 
 function resizeInput() {
-  this.style.width = this.value.length + "ch";
+  this.style.width = this.value.length + "ch" +1;
 }*/

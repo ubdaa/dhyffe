@@ -22,6 +22,8 @@ $author = getInfoFromAuthor($postInfo[array_key_first($postInfo)]["userId"]);
         <title>Post - Dhyffe</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div class="header">
@@ -80,12 +82,15 @@ $author = getInfoFromAuthor($postInfo[array_key_first($postInfo)]["userId"]);
                     
                     <hr>
 
-                    <?php echo '<form action="commPost.php?p=' . $postInfo[0]["postId"] . '" class="commentaire" method="post">'; ?>
-                        <input type="text" name="Content" placeholder="Mettre un commentaire">
-                        <button><img src="images/send.png" alt=""></button>
-                    </form>
+                    <?php 
+                    
+                        if (isset($_SESSION['connState']) && $_SESSION['connState'] === 1) {
+                            echo '<form action="commPost.php?p=' . $postInfo[0]["postId"] . '" class="commentaire" method="post">
+                                <input type="text" name="Content" placeholder="Mettre un commentaire">
+                                <button><img src="images/send.png" alt=""></button>
+                            </form>'; 
+                        }
 
-                    <?php
                         require_once("include/globalFunction.php");
 
                         $comms = getAllCommsFromPost($postInfo[0]['postId']); 
@@ -106,6 +111,7 @@ $author = getInfoFromAuthor($postInfo[array_key_first($postInfo)]["userId"]);
                             }
                         }
                     ?>
+
                 </div>
             </div>
         </div>

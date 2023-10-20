@@ -24,6 +24,8 @@ $infos = getInfoFromUser($_SESSION["username"]);
         <?php echo '<title>Modifier le profil : @' . $infos[0]["username"] . ' - Dhyffe</title>' ; ?>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div class="header">
@@ -92,8 +94,6 @@ $infos = getInfoFromUser($_SESSION["username"]);
                                     echo '<input type="text" name="name" placeholder="Votre nom" value="' . $infos[0]['name'] . '">';
                                     echo '<p class="pseudoAt">@<input class="pseudoAt" type="text" name="username" placeholder="pseudo" value="' . $infos[0]['username'] . '"></p>';
                                 ?>
-                                
-                                <button  class="profilButton"><span class="material-symbols-rounded">check</span>Confirmer</button>
                             </div>
                             
                             <div class="biographie">
@@ -102,8 +102,9 @@ $infos = getInfoFromUser($_SESSION["username"]);
                                 <?php
                                     echo '<textarea name="bio" placeholder="Votre biographie ici">' . $infos[0]["bio"] .'</textarea>';
                                 ?>
-
                                 <hr>
+                                
+                                <button class="compte profil profilButton"><span class="material-symbols-rounded">check</span>Confirmer</button>
                             </div>
                         </form>
                     </div>
@@ -111,6 +112,7 @@ $infos = getInfoFromUser($_SESSION["username"]);
             </div>
         </div>
 
-        <script src="modify.js"></script>
+        <script src="modify.js">
+        </script>
     </body>
 </html>
